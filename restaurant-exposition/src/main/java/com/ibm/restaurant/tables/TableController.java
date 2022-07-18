@@ -16,7 +16,7 @@ public class TableController {
 
     @PostMapping
     public void createTable(@RequestBody TableDto table){
-    tableService.create();
+    //tableService.create();
     }
 
 }
