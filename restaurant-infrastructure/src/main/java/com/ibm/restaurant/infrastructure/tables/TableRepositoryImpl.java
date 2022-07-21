@@ -4,7 +4,9 @@ import com.ibm.restaurant.domain.ITableRepository;
 import com.ibm.restaurant.domain.Table;
 import org.springframework.stereotype.Repository;
 
+import java.util.ArrayList;
 import java.util.HashSet;
+import java.util.List;
 import java.util.Set;
 
 @Repository
@@ -19,5 +21,17 @@ public class TableRepositoryImpl implements ITableRepository {
 
             System.out.println("=============== db element: "+ table1.toString());
         }
+    }
+
+    @Override
+    public Table getTableById(Long id) {
+        List<Table> tables = new ArrayList<>(dbSet);
+        for(Table table: tables){
+            if(id.equals(table.getId())){
+
+                return table;
+            }
+        }
+        return null;
     }
 }

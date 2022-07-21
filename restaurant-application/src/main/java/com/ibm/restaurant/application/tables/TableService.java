@@ -14,4 +14,10 @@ public class TableService {
     public void create(Table table) {
         iTableRepository.createTable(table);
     }
+
+    public Table getTableById(Long id){
+
+        return iTableRepository.getTableById(id);
+
+    }
 }

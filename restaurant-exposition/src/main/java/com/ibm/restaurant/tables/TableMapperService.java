@@ -11,4 +11,11 @@ public class TableMapperService {
         table.setStatus(dto.status);
         return table;
     }
+
+    public TableDto mapFromDomain(Table table){
+        TableDto dto = new TableDto();
+        dto.capacity = table.getCapacity();
+        dto.status = table.getStatus();
+        return dto;
+    }
 }

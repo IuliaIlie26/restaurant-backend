@@ -5,10 +5,7 @@ import com.ibm.restaurant.domain.Table;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("api/v1/table")
@@ -25,5 +22,15 @@ public class TableController {
         tableService.create(table);
         return ResponseEntity.status(HttpStatus.CREATED).build();
     }
+
+    @GetMapping("/{id}")
+    public ResponseEntity<TableDto> getTableById(@PathVariable Long id){
+
+       Table table = tableService.getTableById(id);
+       TableDto dto = tableMapperService.mapFromDomain(table);
+       return ResponseEntity.status(HttpStatus.OK).body(dto);
+
+    }
+
 
 }
