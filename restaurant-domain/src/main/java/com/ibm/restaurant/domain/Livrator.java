@@ -3,6 +3,9 @@ package com.ibm.restaurant.domain;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
+import java.util.Arrays;
+import java.util.Objects;
+
 @Component
 public class Livrator
 {
@@ -53,5 +56,31 @@ public class Livrator
 
     public void setStatus_Disponibilitate(Const status_Disponibilitate) {
         Status_Disponibilitate = status_Disponibilitate;
+    }
+
+    //Update 24/07/2022 - 17:43;
+
+    @Override
+    public int hashCode()
+    {
+        return Objects.hash(ID);
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj) return true;
+        if (obj == null || getClass() != obj.getClass()) return false;
+        Livrator pers1  = (Livrator) obj;
+        return Objects.equals(ID, pers1.ID);
+    }
+
+    @Override
+    public String toString() {
+        return "Livrator{" +
+                "id=" + ID +
+                ", Numele Livratorului este: " + Nume.getNume() + Nume.getPrenume() +
+                ", Numar de telefon: " + Numar_de_Telefon + '\'' +
+                ", Lista Comenzi: " + Arrays.toString(Lista_Comenzi) + '\'' +
+                '}';
     }
 }
