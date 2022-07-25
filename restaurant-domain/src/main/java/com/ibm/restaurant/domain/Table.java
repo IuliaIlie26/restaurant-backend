@@ -4,12 +4,15 @@ import java.util.Objects;
 
 public class Table {
 
-    private final Long id;
-    private final String capacity;
+    private Long id;
+    private String capacity;
     private String status;
 
-    public Table(Long id, String capacity) {
+    public void setId(Long id) {
         this.id = id;
+    }
+
+    public void setCapacity(String capacity) {
         this.capacity = capacity;
     }
 

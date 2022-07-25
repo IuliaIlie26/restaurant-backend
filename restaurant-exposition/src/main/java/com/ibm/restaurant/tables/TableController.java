@@ -7,8 +7,12 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.HashSet;
+
+import static com.sun.xml.fastinfoset.alphabet.BuiltInRestrictedAlphabets.table;
+
 @RestController
-@RequestMapping("api/v1/table")
+@RequestMapping("api/v1/tables")
 public class TableController {
 
     @Autowired
@@ -32,5 +36,13 @@ public class TableController {
 
     }
 
+    @GetMapping
+    public ResponseEntity<HashSet <TableDto>> getTableList()
+    {
+
+        HashSet<Table> tableList = tableService.getTableList();
+        HashSet<TableDto> tableDtoList = tableMapperService.mapFromDomain(tableList);
+        return ResponseEntity.status(HttpStatus.OK).body(tableDtoList);
+    }
 
 }

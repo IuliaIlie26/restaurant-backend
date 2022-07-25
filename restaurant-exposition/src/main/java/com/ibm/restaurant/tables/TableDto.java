@@ -8,4 +8,6 @@ public class TableDto {
     public String capacity;
     @JsonProperty
     public String status;
+    @JsonProperty
+    public long id;
 }
