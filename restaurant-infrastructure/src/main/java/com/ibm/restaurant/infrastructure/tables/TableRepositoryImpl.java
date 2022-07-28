@@ -41,5 +41,11 @@ public class TableRepositoryImpl implements ITableRepository {
         return new HashSet<>(dbSet);
     }
 
+    @Override
+    public void updateTable(Table table) {
+        dbSet.remove(table);
+        dbSet.add(table);
+    }
+
 
 }

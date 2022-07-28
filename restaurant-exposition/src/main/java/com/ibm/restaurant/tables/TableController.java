@@ -45,4 +45,13 @@ public class TableController {
         return ResponseEntity.status(HttpStatus.OK).body(tableDtoList);
     }
 
+    @PutMapping("/{id}")
+    public ResponseEntity<Void> updateTable(@PathVariable Long id, @RequestBody TableDto dto)
+    {
+        Table table=tableMapperService.mapToDomain(dto);
+        tableService.updateTable(id,table);
+        return ResponseEntity.status(HttpStatus.NO_CONTENT).build();
+    }
+
+
 }

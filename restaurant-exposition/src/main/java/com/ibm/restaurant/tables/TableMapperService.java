@@ -23,15 +23,12 @@ public class TableMapperService {
         return dto;
     }
 
-    public HashSet<TableDto> mapFromDomain(HashSet<Table> tableList)
-    {
-        HashSet <TableDto> listAux = new HashSet<>();
-        for(Table table : tableList)
-        {
-          listAux.add(mapFromDomain(table));
+    public HashSet<TableDto> mapFromDomain(HashSet<Table> tableList) {
+        HashSet<TableDto> listAux = new HashSet<>();
+        for (Table table : tableList) {
+            listAux.add(mapFromDomain(table));
 
         }
         return listAux;
     }
-
 }
