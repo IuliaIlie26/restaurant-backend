@@ -1,22 +1,25 @@
-package com.ibm.restaurant.domain;
+package src.main.java.com.ibm.restaurant.domain;
 
 public class Table {
 
-    private final Long id;
-    private final String capacity;
+    private String tableID;
+    private String capacity;
     private String status;
 
-    public Table(Long id, String capacity) {
-        this.id = id;
-        this.capacity = capacity;
+    public String getTableID() {
+        return tableID;
     }
 
-    public Long getId() {
-        return id;
+    public void setTableID(String tableID) {
+        this.tableID = tableID;
     }
 
     public String getCapacity() {
         return capacity;
+    }
+
+    public void setCapacity(String capacity) {
+        this.capacity = capacity;
     }
 
     public String getStatus() {
