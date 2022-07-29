@@ -8,6 +8,7 @@ public class Client {
     private String last_name;
     private String nr_tel;
     private String email;
+
     private List<cupoane>;
 
     public Long getId() {
