@@ -1,4 +1,4 @@
-package com.ibm.restaurant.application.tables;
+package com.ibm.restaurant.application.wallet;
 
 import com.ibm.restaurant.domain.Wallet;
 import org.springframework.stereotype.Service;

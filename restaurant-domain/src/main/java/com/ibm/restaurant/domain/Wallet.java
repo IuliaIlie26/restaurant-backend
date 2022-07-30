@@ -4,7 +4,7 @@ public class Wallet {
 
     private int walletId;
     private double balance;
-    private Clients client;
+    private Client client;
 
     public int getWalletId() {
         return walletId;
@@ -22,11 +22,11 @@ public class Wallet {
         this.balance = balance;
     }
 
-    public Clients getClient() {
+    public Client getClient() {
         return client;
     }
 
-    public void setClient(Clients client) {
+    public void setClient(Client client) {
         this.client = client;
     }
 }

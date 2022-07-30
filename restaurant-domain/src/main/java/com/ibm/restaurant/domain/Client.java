@@ -1,8 +1,8 @@
 package com.ibm.restaurant.domain;
 
-public class Clients {
+public class Client {
 
-    private int id;
+    private Long id;
     private String firstName;
     private String lastName;
     private Adress adress;
@@ -10,11 +10,18 @@ public class Clients {
     private String email;
     private Wallet wallet;
 
-    public int getId() {
+    public Client() {
+    }
+
+    public Client(Long id) {
+        this.id = id;
+    }
+
+    public Long getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(Long id) {
         this.id = id;
     }
 

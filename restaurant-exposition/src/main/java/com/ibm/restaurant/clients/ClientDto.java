@@ -5,18 +5,20 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.ibm.restaurant.domain.Adress;
 import com.ibm.restaurant.domain.Wallet;
 
-public class ClientsDto {
+public class ClientDto {
 
     @JsonProperty
-    private String firstName;
+    public Long id;
     @JsonProperty
-    private String lastName;
+    public String firstName;
     @JsonProperty
-    private Adress adress;
+    public String lastName;
     @JsonProperty
-    private String phoneNumber;
+    public Adress adress;
     @JsonProperty
-    private String email;
+    public String phoneNumber;
     @JsonProperty
-    private Wallet wallet;
+    public String email;
+    @JsonProperty
+    public Wallet wallet;
 }
