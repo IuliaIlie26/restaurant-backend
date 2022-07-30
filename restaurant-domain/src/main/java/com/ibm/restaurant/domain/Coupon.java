@@ -29,10 +29,7 @@ public class Coupon {
         this.discountValue = discountValue;
     }
 
-    public enum couponStatus{
-        ACTIVE,
-        INACTIVE;
-    }
+
 
 
 }
