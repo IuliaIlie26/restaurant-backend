@@ -1,9 +1,13 @@
 package com.ibm.restaurant.domain;
 
 public class Coupon {
+    
     private Long id;
     private Client client;
     private double discountValue;
+    private CouponType couponType;
+    private CouponStatus couponStatus;
+
 
     public Long getId() {
         return id;
@@ -29,7 +33,21 @@ public class Coupon {
         this.discountValue = discountValue;
     }
 
+    public CouponType getCouponType() {
+        return couponType;
+    }
 
+    public void setCouponType(CouponType couponType) {
+        this.couponType = couponType;
+    }
+
+    public CouponStatus getCouponStatus() {
+        return couponStatus;
+    }
+
+    public void setCouponStatus(CouponStatus couponStatus) {
+        this.couponStatus = couponStatus;
+    }
 
 
 }

@@ -1,5 +1,7 @@
 package com.ibm.restaurant.domain;
 
+import java.util.List;
+import java.util.ArrayList;
 import java.util.Objects;
 
 public class Client {
@@ -8,8 +10,11 @@ public class Client {
     private String last_name;
     private String nr_tel;
     private String email;
+    private List<Coupon> couponList;
 
-    private List<cupoane>;
+    public Client() {
+        this.couponList = new ArrayList<>();
+    }
 
     public Long getId() {
         return id;
