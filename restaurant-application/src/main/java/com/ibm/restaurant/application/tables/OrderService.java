@@ -1,5 +1,6 @@
-package src.main.java.com.ibm.restaurant.application.tables;
+package com.ibm.restaurant.application.tables;
 
+import com.ibm.restaurant.domain.Orders;
 import org.springframework.stereotype.Service;
 
 @Service

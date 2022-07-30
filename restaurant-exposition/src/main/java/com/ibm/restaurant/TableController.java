@@ -1,5 +1,6 @@
 package com.ibm.restaurant;
 
+import com.ibm.restaurant.application.tables.TableService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -12,9 +13,10 @@ public class TableController {
 
     @Autowired
     TableService tableService;
+
     @PostMapping
     public void createTable(@RequestBody TableDto table){
 
-        tableService.create();
+
     }
 }

@@ -1,4 +1,4 @@
-package src.main.java.com.ibm.restaurant.domain;
+package com.ibm.restaurant.domain;
 
 public class Table {
 

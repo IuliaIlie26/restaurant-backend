@@ -1,6 +1,6 @@
-package com.ibm.restaurant.tables;
+package com.ibm.restaurant;
 
-import com.ibm.restaurant.application.tables.TableService;
+import com.ibm.restaurant.application.tables.MenuService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -8,15 +8,14 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping("api/v1/table")
-public class TableController {
+@RequestMapping("api/menu")
+public class MenuController {
 
     @Autowired
-    TableService tableService;
+    MenuService menuService;
 
     @PostMapping
-    public void createTable(@RequestBody TableDto table){
-   // tableService.create();
-    }
+    public void createMenu(@RequestBody MenuDto menu){
 
+    }
 }
