@@ -29,13 +29,9 @@ public class Coupon {
         this.discountValue = discountValue;
     }
 
-    private enum couponType{
-        percentage,
-        value;
-    }
-    private enum couponStatus{
-        active,
-        inactive;
+    public enum couponStatus{
+        ACTIVE,
+        INACTIVE;
     }
 
 
