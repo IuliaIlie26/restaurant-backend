@@ -39,4 +39,12 @@ public class ClientController {
         HashSet<ClientDto> clientDtos = clientMapperService.mapFromDomain(clientList);
         return ResponseEntity.status(HttpStatus.OK).body(clientDtos);
     }
+
+    @PutMapping("/{id}")
+    public ResponseEntity<Void> updateClientById(@PathVariable Long id, @RequestBody ClientDto clientDto){
+        Client client = clientMapperService.mapToDomain(clientDto);
+        clientService.updateClientById(id, client);
+        return ResponseEntity.status(HttpStatus.NO_CONTENT).build();
+    }
+
 }

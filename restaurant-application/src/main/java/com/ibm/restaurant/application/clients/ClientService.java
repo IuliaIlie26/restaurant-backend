@@ -26,4 +26,15 @@ public class ClientService {
     public HashSet<Client> getClientList(){
         return clientRepository.getClientList();
     }
+
+    public void updateClientById(Long id, Client client){
+        Client clientFromDb = getClientById(id);
+        clientFromDb.setFirstName(client.getFirstName());
+        clientFromDb.setLastName(client.getLastName());
+        clientFromDb.setAdress(client.getAdress());
+        clientFromDb.setPhoneNumber(client.getPhoneNumber());
+        clientFromDb.setEmail(client.getEmail());
+        clientFromDb.setWallet(client.getWallet());
+        clientRepository.updateClientById(clientFromDb);
+    }
 }
